@@ -25,7 +25,7 @@ const blogLinks = {
 
 const PostLink = (props)=>(
     <li style={stylingList}>
-        <Link as={`/p?title=${props.mask}`} href={`/post?title=${props.title}`}>
+        <Link as={`/p/title=${props.mask}`} href={`/post?title=${props.title}`}>
             <a style={blogLinks}>{props.title}</a>
         </Link>
     </li>
