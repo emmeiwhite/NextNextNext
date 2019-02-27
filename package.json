@@ -3,21 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "next": "^8.0.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "devDependencies": {},
   "scripts": {
-    "dev": "nodeman -h next",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "next": "^8.0.3",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "redux": "^4.0.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.10"
-  }
+  "license": "ISC"
 }

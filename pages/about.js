@@ -1,6 +1,9 @@
+import Layout from '../components/GeneralLayout';
+
 export default ()=>(
-        <div>
+        <Layout>
             This is the About Page !!!
             <p>At last what matters is good work</p>
-        </div>
+            <p>It again has been responding wierdly</p>
+        </Layout>
 );
