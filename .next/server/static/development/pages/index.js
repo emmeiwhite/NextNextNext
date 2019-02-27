@@ -1428,6 +1428,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -1450,18 +1453,15 @@ var parentList = {
 };
 var blogLinks = {
   textDecoration: 'none',
-  color: 'green'
-};
+  color: 'green' // NOW WE HAVE DECIDED TO FETCH THE DATA FROM THE API. Nothing like static stuff would remain
+  // const PostLink = (props)=>(
+  //     <li style={stylingList}>
+  //         <Link as={`/p/title=${props.mask}`} href={`/post?title=${props.title}`}>
+  //             <a style={blogLinks}>{props.title}</a>
+  //         </Link>
+  //     </li>
+  // )
 
-var PostLink = function PostLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-    style: stylingList
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    as: "/p/title=".concat(props.mask),
-    href: "/post?title=".concat(props.title)
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
-    style: blogLinks
-  }, props.title)));
 };
 
 var Home =
@@ -1478,24 +1478,12 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Home, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_GeneralLayout__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h1", null, "It's the Home Page."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h3", null, "Let's Visit our About Page"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: "/about"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        style: {
-          color: "#00FF00",
-          fontSize: 15
-        }
-      }, "ABOUT PAGE")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h2", null, "BLOG LINKS:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
-        style: parentList
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(PostLink, {
-        mask: "learning",
-        title: "About Overall Learning"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(PostLink, {
-        mask: "process",
-        title: "A Gradual Process"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(PostLink, {
-        mask: "peace",
-        title: "No Where Is Peace"
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_GeneralLayout__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h1", null, "Batman TV Shows"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, props.shows.map(function (_ref) {
+        var show = _ref.show;
+        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+          as: "/p/".concat(show.id),
+          href: "/post?id=".concat(show.id)
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", null, show.name));
       })));
     }
   }]);
@@ -1615,6 +1603,17 @@ module.exports = require("core-js/library/fn/symbol");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/symbol/iterator");
+
+/***/ }),
+
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 
