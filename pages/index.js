@@ -6,23 +6,23 @@ import fetch from 'isomorphic-unfetch';
 
 // We'll use the query string to show our dynamic content
 
-const stylingList = {
-    listStyle:'none',
-    padding:0,
-    margin:0,
-    marginBottom:10,
-    fontSize:16,
-}
+// const stylingList = {
+//     listStyle:'none',
+//     padding:0,
+//     margin:0,
+//     marginBottom:10,
+//     fontSize:16,
+// }
 
-const parentList = {
-    margin:0,
-    padding:0
-}
+// const parentList = {
+//     margin:0,
+//     padding:0
+// }
 
-const blogLinks = {
-    textDecoration:'none',
-    color:'green'
-}
+// const blogLinks = {
+//     textDecoration:'none',
+//     color:'green'
+// }
 
 // NOW WE HAVE DECIDED TO FETCH THE DATA FROM THE API. Nothing like static stuff would remain
 // const PostLink = (props)=>(
@@ -70,11 +70,38 @@ class Home extends React.Component{
                                                 <a>{show.name}</a>
         
                                         </Link>
+
                                     </li>
                                    
                                 ))
                             }
                         </ul>
+
+                        <style jsx>{`
+                                            h1,a{
+                                                font-family:'Times New Roman';
+                                                color:gray;
+                                            }
+                                            ul{
+                                                padding:0;
+                                                margin:0;
+                                            }
+                                            li{
+                                                list-style:none;
+                                                margin:5px 0;
+                                            }
+                                
+                                            a{
+                                                text-decoration:none;
+                                                color:#333;
+                                                transition:all 0.2s;
+                                            }
+                                
+                                            li a:hover{
+                                                color:#111;
+                                            }
+                                        `}
+                                        </style>
             </Layout>
         )
     }
