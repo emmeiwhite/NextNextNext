@@ -10266,13 +10266,13 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
         case 5:
           data = _context.sent;
-          console.log(data);
+          // console.log(data);
           console.log("WE JUST FETCHED SOME COOL DATA. TOTAL SHOWS ARE ".concat(data.length));
           return _context.abrupt("return", {
             shows: data
           });
 
-        case 9:
+        case 8:
         case "end":
           return _context.stop();
       }
@@ -10283,7 +10283,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fimran%2FDocuments%2Femmeisoft%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************/
@@ -10306,5 +10306,5 @@ module.exports = dll_3681e7fd756237ce51c6;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]));;
+},[[2,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map

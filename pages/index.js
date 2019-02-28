@@ -68,6 +68,7 @@ class Home extends React.Component{
                                             href={`/post?id=${show.id}`}>
 
                                                 <a>{show.name}</a>
+        
                                         </Link>
                                     </li>
                                    
@@ -85,7 +86,7 @@ Home.getInitialProps = async function(){
     const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
 
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
 
     console.log(`WE JUST FETCHED SOME COOL DATA. TOTAL SHOWS ARE ${data.length}`);
 
